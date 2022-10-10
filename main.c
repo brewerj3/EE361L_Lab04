@@ -27,9 +27,13 @@ int msg_length(char msg[])
     return length;
 }
 
-int palindrome(char msg[], int length)
-{
-    return 0;
+int palindrome(char msg[], int length) {
+    for(int i = 0; i<=length; i++) {
+        if( msg[i] != msg[length-i-1] ) {
+            return 0;
+        }
+    }
+    return 1;
 }
 
 void main()
